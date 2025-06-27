@@ -1,0 +1,378 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body.site {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+.site-content {
+    flex: 1;
+}
+
+/* Стили для шапки */
+header {
+    background-color: #f8f8f8;
+    padding: 15px 0;
+    border-bottom: 1px solid #e7e7e7;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 40px;
+    transition: opacity 0.3s;
+}
+
+.logo img:hover {
+    opacity: 0.8;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #b78b66;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-actions a {
+    position: relative;
+    display: block;
+}
+
+.user-actions img {
+    height: 24px;
+    width: 24px;
+    transition: opacity 0.3s;
+}
+
+.user-actions img:hover {
+    opacity: 0.7;
+}
+
+.cart-link {
+    display: flex;
+    align-items: center;
+}
+
+.cart-counter {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #b78b66;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Основное содержимое */
+main {
+    padding: 40px 0;
+}
+
+.product-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.product-image {
+    flex: 1;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+}
+
+.product-details {
+    flex: 1;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.price {
+    font-size: 24px;
+    color: #b8860b;
+    margin-bottom: 20px;
+}
+
+.product-options {
+    margin-bottom: 25px;
+    color: #666;
+    display: flex;
+    gap: 20px;
+}
+
+.option-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.option-selector label {
+    font-size: 14px;
+    color: #555;
+}
+
+.custom-select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 150px;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+.custom-select:hover {
+    border-color: #b8860b;
+}
+
+.custom-select:focus {
+    outline: none;
+    border-color: #b8860b;
+    box-shadow: 0 0 0 2px rgba(184, 134, 11, 0.2);
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quantity-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.quantity {
+    margin: 0 15px;
+    width: 30px;
+    text-align: center;
+}
+
+.add-to-cart {
+    margin-left: 20px;
+    padding: 10px 25px;
+    background: #b8860b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+    background: #a5770a;
+}
+
+/* Стили для табов с hover-эффектами */
+.product-tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-right: 5px;
+    position: relative;
+    transition: all 0.3s ease;
+    color: #666;
+}
+
+.tab-btn:not(.active):hover {
+    color: #b8860b;
+    background-color: rgba(184, 134, 11, 0.1);
+}
+
+.tab-btn.active {
+    border-bottom: 2px solid #b8860b;
+    color: #b8860b;
+    font-weight: bold;
+}
+
+.tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #b8860b;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.tab-btn:hover::after {
+    transform: scaleX(1);
+}
+
+.tab-btn.active::after {
+    transform: scaleX(1);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Подвал */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.contact-info {
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.copyright {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+    }
+    
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .main-nav li {
+        margin: 5px 10px;
+    }
+    
+    .product-tabs {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        margin-right: 0;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+}
+
+.main-nav a[href="catalog.php"] {
+    color: #b78b66;
+    position: relative;
+}
+
+.main-nav a[href="catalog.php"]::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #b78b66;
+}
+
+/* Для страницы каталога, чтобы выделять текущий пункт */
+body.catalog-page .main-nav a[href="catalog.php"] {
+    color: #b78b66;
+    font-weight: bold;
+}
